@@ -1,0 +1,25 @@
+Node.h and Node.hpp
+
+Created by Jake Suddock on January 25, 2016
+
+
+
+Make File
+---------
+
+name: main.o
+	g++ -g -std=c++11 main.o -o name
+main.o: main.cpp Node.h Node.hpp
+	g++ -g -c -std=c++11 main.cpp
+
+
+
+Using Node
+----------
+
+Node<int>* nodeptr = new Node<int>(value); //Create New Node And Set Pointer To It.
+
+int temp = nodeptr->getValue();
+nodeptr->setValue(temp);
+Node<int>* anotherptr = nodeptr->getNext();
+nodeptr->setNext(anotherptr);
